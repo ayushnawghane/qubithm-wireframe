@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Qubithm - Enterprise IT consulting services, talent outsourcing, and innovative technology solutions for businesses worldwide">
+    <meta name="keywords" content="IT consulting services, enterprise software solutions, talent outsourcing, technology advisory, staff augmentation">
+    <title>Qubithm - Driving Growth Through Innovative IT Solutions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: #ffffff;
+            color: #000000;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navigation */
+        nav {
+            background: #f8f8f8;
+            border-bottom: 2px solid #000;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            border: 2px solid #000;
+            padding: 10px 20px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #000;
+            font-weight: 500;
+            border-bottom: 2px solid transparent;
+        }
+        
+        .nav-links a:hover {
+            border-bottom: 2px solid #000;
+        }
+        
+        /* Sections */
+        .section {
+            padding: 80px 0;
+            border-bottom: 3px solid #000;
+        }
+        
+        .section:first-of-type {
+            margin-top: 80px;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            border: 3px solid #000;
+            padding: 20px;
+            display: inline-block;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2em;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            background: #f0f0f0;
+            text-align: center;
+        }
+        
+        .hero-content h1 {
+            font-size: 3.5em;
+            margin-bottom: 30px;
+            border: 4px solid #000;
+            padding: 30px;
+        }
+        
+        .hero-content p {
+            font-size: 1.3em;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 15px 30px;
+            border: 3px solid #000;
+            background: transparent;
+            color: #000;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            background: #000;
+            color: #fff;
+        }
+        
+        .btn-primary {
+            background: #000;
+            color: #fff;
+        }
+        
+        .btn-primary:hover {
+            background: transparent;
+            color: #000;
+        }
+        
+        /* Stats Section */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+        
+        .stat-card {
+            text-align: center;
+            border: 2px solid #000;
+            padding: 40px 20px;
+        }
+        
+        .stat-number {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        
+        .stat-description {
+            color: #666;
+        }
+        
+        /* Service Sections */
+        .service-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .benefit-card {
+            border: 2px solid #000;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            border: 2px solid #000;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+        }
+        
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .project-card {
+            border: 2px solid #000;
+            padding: 0;
+        }
+        
+        .project-image {
+            height: 200px;
+            background: #e0e0e0;
+            border-bottom: 2px solid #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .project-content {
+            padding: 20px;
+        }
+        
+        .project-title {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+        
+        /* Clients Grid */
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .client-logo {
+            height: 80px;
+            border: 2px solid #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        /* Industries Grid */
+        .industries-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .industry-card {
+            border: 2px solid #000;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .industry-icon {
+            width: 50px;
+            height: 50px;
+            border: 2px solid #000;
+            margin: 0 auto 15px;
+        }
+        
+        /* Tech Stack */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 20px;
+        }
+        
+        .tech-card {
+            border: 2px solid #000;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            border: 2px solid #000;
+            padding: 30px;
+        }
+        
+        .testimonial-quote {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+        }
+        
+        /* Blog Cards */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .blog-card {
+            border: 2px solid #000;
+        }
+        
+        .blog-image {
+            height: 150px;
+            background: #e0e0e0;
+            border-bottom: 2px solid #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .blog-content {
+            padding: 20px;
+        }
+        
+        /* Awards */
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        
+        .award-card {
+            border: 2px solid #000;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .award-icon {
+            width: 60px;
+            height: 60px;
+            border: 2px solid #000;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Final CTA */
+        .final-cta {
+            background: #f0f0f0;
+            text-align: center;
+            padding: 100px 0;
+        }
+        
+        .final-cta h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            border: 3px solid #000;
+            padding: 30px;
+            display: inline-block;
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5em;
+            }
+            
+            .section-title {
+                font-size: 2em;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">QUBITHM</div>
+                <div class="nav-links">
+                    <a href="#services">Services</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#industries">Industries</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Driving Growth Through Innovative IT Solutions</h1>
+                <p>We empower businesses with Consultancy as a Service and Talent as a Service, delivering scalable solutions and exceptional expertise.</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">Let's Build Your Future Together</a>
+                    <a href="#projects" class="btn">Explore Our Expertise</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Growth Statistics -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Proven Growth Impact</h2>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Projects Delivered</div>
+                    <div class="stat-description">From startups to enterprises, we deliver measurable results</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">Client Retention Rate</div>
+                    <div class="stat-description">Long-term partnerships built on trust and excellence</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">20+</div>
+                    <div class="stat-label">Industries Served</div>
+                    <div class="stat-description">Deep expertise across diverse business sectors</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Countries Worldwide</div>
+                    <div class="stat-description">Global clientele spanning multiple continents</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultancy as a Service -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Your Vision, Our Consultancy Expertise</h2>
+                <p class="section-subtitle">Transform your business with strategic technology guidance and end-to-end project expertise</p>
+            </div>
+            <div class="service-benefits">
+                <div class="benefit-card">
+                    <div class="benefit-icon">📋</div>
+                    <h3>Strategic Technology Roadmaps</h3>
+                    <p>Comprehensive planning for sustainable growth</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚀</div>
+                    <h3>Scalable Enterprise Solutions</h3>
+                    <p>Future-ready systems that grow with your business</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Cost & Time Optimization</h3>
+                    <p>Maximum efficiency with minimal resource waste</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>End-to-End Project Guidance</h3>
+                    <p>From concept to deployment and beyond</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#" class="btn">See How Our Consultancy Works</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Talent as a Service -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Top Talent, On-Demand</h2>
+                <p class="section-subtitle">Access skilled developers, designers, and analysts exactly when you need them</p>
+            </div>
+            <div class="service-benefits">
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚙️</div>
+                    <h3>Backend Experts</h3>
+                    <p>Robust server-side development</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎨</div>
+                    <h3>Frontend Specialists</h3>
+                    <p>Exceptional user experiences</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🤖</div>
+                    <h3>AI Engineers</h3>
+                    <p>Cutting-edge artificial intelligence</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📊</div>
+                    <h3>Marketing Strategists</h3>
+                    <p>Data-driven growth campaigns</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#" class="btn">Hire Your Dream Team</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects We Delivered -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Solutions That Speak for Themselves</h2>
+                <p class="section-subtitle">From vision to execution, we turn ideas into enterprise-ready solutions</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">[PROJECT MOCKUP]</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Enterprise Resource Planning System</h3>
+                        <p>Streamlined operations for Fortune 500 client</p>
+                        <strong>Result: 40% efficiency increase</strong>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">[PROJECT MOCKUP]</div>
+                    <div class="project-content">
+                        <h3 class="project-title">AI-Powered Analytics Platform</h3>
+                        <p>Real-time business intelligence dashboard</p>
+                        <strong>Result: 60% faster decision-making</strong>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">[PROJECT MOCKUP]</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Healthcare Management System</h3>
+                        <p>Patient data management and scheduling</p>
+                        <strong>Result: 50% reduction in wait times</strong>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#" class="btn">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients We Served -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Trusted by Industry Leaders</h2>
+                <p class="section-subtitle">Our solutions power businesses of all sizes</p>
+            </div>
+            <div class="clients-grid">
+                <div class="client-logo">CLIENT LOGO 1</div>
+                <div class="client-logo">CLIENT LOGO 2</div>
+                <div class="client-logo">CLIENT LOGO 3</div>
+                <div class="client-logo">CLIENT LOGO 4</div>
+                <div class="client-logo">CLIENT LOGO 5</div>
+                <div class="client-logo">CLIENT LOGO 6</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries We Serve -->
+    <section class="section" id="industries">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Industry Expertise Across the Board</h2>
+                <p class="section-subtitle">Deep understanding of industry-specific challenges ensures tailored solutions</p>
+            </div>
+            <div class="industries-grid">
+                <div class="industry-card">
+                    <div class="industry-icon"></div>
+                    <h3>Finance</h3>
+                </div>
+                <div class="industry-card">
+                    <div class="industry-icon"></div>
+                    <h3>Healthcare</h3>
+                </div>
+                <div class="industry-card">
+                    <div class="industry-icon"></div>
+                    <h3>Retail</h3>
+                </div>
+                <div class="industry-card">
+                    <div class="industry-icon"></div>
+                    <h3>Education</h3>
+                </div>
+                <div class="industry-card">
+                    <div class="industry-icon"></div>
+                    <h3>Manufacturing</h3>
+                </div>
+                <div class="industry-card">
+                    <div class="industry-icon"></div>
+                    <h3>Logistics</h3>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#" class="btn">See Industry Insights</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Developing Technologies -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Building with Tomorrow's Tech Today</h2>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-card">Django</div>
+                <div class="tech-card">React</div>
+                <div class="tech-card">Scikit-Learn</div>
+                <div class="tech-card">PyTorch</div>
+                <div class="tech-card">AWS</div>
+                <div class="tech-card">Docker</div>
+                <div class="tech-card">Kubernetes</div>
+                <div class="tech-card">TensorFlow</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Honest Testimonials -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Hear It from Our Clients</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"Qubithm transformed our entire digital infrastructure. Their expertise and dedication exceeded all expectations."</p>
+                    <div class="testimonial-author">John Smith, CTO at TechCorp</div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"The talent they provided integrated seamlessly with our team. Exceptional quality and professionalism."</p>
+                    <div class="testimonial-author">Sarah Johnson, VP of Engineering</div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"Their consultancy services saved us millions in development costs while accelerating our time to market."</p>
+                    <div class="testimonial-author">Michael Chen, Founder & CEO</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Trending Applications -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Applications Making Waves</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">[APP SCREENSHOT]</div>
+                    <div class="project-content">
+                        <h3>SmartAnalytics Pro</h3>
+                        <p>Real-time business intelligence platform</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">[APP SCREENSHOT]</div>
+                    <div class="project-content">
+                        <h3>WorkFlow Manager</h3>
+                        <p>Enterprise project management solution</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">[APP SCREENSHOT]</div>
+                    <div class="project-content">
+                        <h3>AI Assistant Hub</h3>
+                        <p>Intelligent automation platform</p>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#" class="btn">Explore Applications</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blogs On The Radar -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Insights You Can't Miss</h2>
+            </div>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-image">[BLOG IMAGE]</div>
+                    <div class="blog-content">
+                        <h3>The Future of AI in Enterprise</h3>
+                        <p>Exploring how artificial intelligence is reshaping business operations...</p>
+                        <small>Published 2 days ago</small>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-image">[BLOG IMAGE]</div>
+                    <div class="blog-content">
+                        <h3>Cloud Migration Best Practices</h3>
+                        <p>Essential strategies for successful cloud transformation...</p>
+                        <small>Published 1 week ago</small>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-image">[BLOG IMAGE]</div>
+                    <div class="blog-content">
+                        <h3>Remote Team Management</h3>
+                        <p>Building high-performance distributed teams...</p>
+                        <small>Published 2 weeks ago</small>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#" class="btn">Read More on Our Blog</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Recognized for Excellence</h2>
+                <p class="section-subtitle">Commitment to innovation and quality recognized globally</p>
+            </div>
+            <div class="awards-grid">
+                <div class="award-card">
+                    <div class="award-icon">🏆</div>
+                    <h3>Best IT Services Provider</h3>
+                    <p>TechExcellence Awards 2024</p>
+                </div>
+                <div class="award-card">
+                    <div class="award-icon">🏆</div>
+                    <h3>Innovation in Enterprise Solutions</h3>
+                    <p>Global Tech Summit 2023</p>
+                </div>
+                <div class="award-card">
+                    <div class="award-icon">🏆</div>
+                    <h3>Top Consulting Firm</h3>
+                    <p>Business Excellence Awards 2023</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Call-to-Action -->
+    <section class="final-cta" id="contact">
+        <div class="container">
+            <h2>Let's Build the Future of Your Business</h2>
+            <p style="font-size: 1.2em; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">Partner with Qubithm for enterprise-level solutions that deliver real growth</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary">Get Started Today</a>
+                <a href="#" class="btn">Schedule a Free Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Simple animation for stats counters
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            counters.forEach(counter => {
+                const target = parseInt(counter.textContent);
+                const increment = target / 100;
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        counter.textContent = target + (counter.textContent.includes('%') ? '%' : '+');
+                        clearInterval(timer);
+                    } else {
+                        counter.textContent = Math.floor(current) + (counter.textContent.includes('%') ? '%' : '+');
+                    }
+                }, 20);
+            });
+        }
+
+        // Trigger counter animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.disconnect();
+                }
+            });
+        });
+
+        const statsSection = document.querySelector('.stats-grid');
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+    </script>
+</body>
+</html>

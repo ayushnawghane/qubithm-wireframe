@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qubithm | Enterprise IT Solutions, Consultancy & Talent Services</title>
+    <meta name="description" content="Qubithm empowers businesses with Consultancy as a Service (CaaS) and Talent as a Service (TaaS), delivering scalable enterprise software solutions and exceptional IT expertise.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary-dark': '#0A0A0A', // Almost black for deep background
+                        'secondary-dark': '#1C1C1C', // Dark gray for cards
+                        'primary-light': '#F5F5F5', // Off-white for text
+                        'secondary-light': '#A3A3A3', // Gray for subtitles
+                        'accent': '#8B5CF6', // A vibrant violet/purple
+                        'accent-hover': '#7C3AED',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-primary-dark font-sans text-primary-light antialiased">
+
+    <header class="sticky top-0 z-50 bg-primary-dark/80 backdrop-blur-lg border-b border-secondary-dark/50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold">Qubithm</a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#stats" class="text-secondary-light hover:text-primary-light transition-colors">Impact</a>
+                <a href="#ecosystem" class="text-secondary-light hover:text-primary-light transition-colors">Ecosystem</a>
+                <a href="#contact" class="text-secondary-light hover:text-primary-light transition-colors">Contact</a>
+            </nav>
+            <a href="#contact" class="hidden md:inline-block bg-accent text-white font-semibold py-2 px-5 rounded-lg hover:bg-accent-hover transition-colors">
+                Get a Consultation
+            </a>
+            <button class="md:hidden">
+                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-7xl font-extrabold leading-tight mb-6">Driving Growth Through Innovative IT Solutions</h1>
+                <p class="text-lg md:text-xl text-secondary-light max-w-3xl mx-auto mb-8">Empowering businesses with on-demand consultancy, elite talent, and scalable enterprise software.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                     <a href="#contact" class="bg-accent text-white font-semibold py-3 px-8 rounded-lg hover:bg-accent-hover transition-colors">Let’s Build Together</a>
+                     <a href="#ecosystem" class="bg-secondary-dark text-primary-light font-semibold py-3 px-8 rounded-lg hover:bg-zinc-800 transition-colors">Explore Our Work</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="stats" class="py-20 md:py-28 bg-secondary-dark">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Our Proven Growth Impact</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <p class="text-5xl md:text-6xl font-extrabold text-accent">100+</p>
+                        <p class="mt-2 text-secondary-light font-semibold">Projects Delivered</p>
+                    </div>
+                    <div>
+                        <p class="text-5xl md:text-6xl font-extrabold text-accent">95%</p>
+                        <p class="mt-2 text-secondary-light font-semibold">Client Retention</p>
+                    </div>
+                    <div>
+                        <p class="text-5xl md:text-6xl font-extrabold text-accent">20+</p>
+                        <p class="mt-2 text-secondary-light font-semibold">Industries Served</p>
+                    </div>
+                    <div>
+                        <p class="text-5xl md:text-6xl font-extrabold text-accent">10+</p>
+                        <p class="mt-2 text-secondary-light font-semibold">Countries with Clientele</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center mb-24">
+                    <div class="bg-secondary-dark h-80 rounded-2xl flex items-center justify-center text-secondary-light italic">[Image: Team in strategic discussion]</div>
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Your Vision, Our Consultancy</h2>
+                        <p class="text-lg text-secondary-light mb-6">We provide strategic roadmaps and end-to-end guidance to ensure your projects are optimized for growth, efficiency, and long-term success.</p>
+                        <a href="#" class="font-semibold text-accent text-lg">Learn about CaaS &rarr;</a>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="md:order-last bg-secondary-dark h-80 rounded-2xl flex items-center justify-center text-secondary-light italic">[Image: Diverse, professional tech talent]</div>
+                    <div class="md:order-first">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Top Talent, On-Demand</h2>
+                        <p class="text-lg text-secondary-light mb-6">Gain immediate access to our vetted pool of world-class developers, designers, and strategists to accelerate your projects and innovate faster.</p>
+                        <a href="#" class="font-semibold text-accent text-lg">Explore TaaS &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="ecosystem" class="py-20 md:py-28 bg-secondary-dark">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Our Proven Ecosystem</h2>
+                <p class="text-lg text-secondary-light max-w-3xl mx-auto text-center mb-16">A complete synergy of groundbreaking solutions, modern technology, and the industry leaders who trust us.</p>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <div class="lg:col-span-2 bg-primary-dark border border-zinc-800 rounded-2xl p-8 md:p-12 flex flex-col justify-between min-h-[400px]">
+                        <div>
+                            <h3 class="text-sm font-semibold text-accent uppercase mb-2">Featured Solution</h3>
+                            <p class="text-3xl font-bold">AI-Powered Logistics Platform</p>
+                            <p class="text-secondary-light mt-2 max-w-xl">We developed a predictive analytics tool for a supply chain leader, reducing delivery times by 25%.</p>
+                        </div>
+                        <a href="#" class="font-semibold text-primary-light hover:text-accent transition-colors self-start mt-6">View Case Study &rarr;</a>
+                    </div>
+
+                    <div class="bg-primary-dark border border-zinc-800 rounded-2xl p-8">
+                        <h3 class="text-xl font-bold mb-4">Building With Tomorrow’s Tech</h3>
+                        <div class="grid grid-cols-2 gap-4 text-center">
+                            <div class="bg-secondary-dark p-4 rounded-lg"><p class="font-semibold">Django</p></div>
+                            <div class="bg-secondary-dark p-4 rounded-lg"><p class="font-semibold">React</p></div>
+                            <div class="bg-secondary-dark p-4 rounded-lg"><p class="font-semibold">PyTorch</p></div>
+                            <div class="bg-secondary-dark p-4 rounded-lg"><p class="font-semibold">Kubernetes</p></div>
+                            <div class="bg-secondary-dark p-4 rounded-lg"><p class="font-semibold">AWS</p></div>
+                            <div class="bg-secondary-dark p-4 rounded-lg"><p class="font-semibold">Next.js</p></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-primary-dark border border-zinc-800 rounded-2xl p-8">
+                        <h3 class="text-xl font-bold mb-4">Trusted By Industry Leaders</h3>
+                        <div class="flex flex-wrap gap-6 items-center opacity-70">
+                            <p class="font-bold text-lg">[Global Tech Inc]</p>
+                            <p class="font-bold text-lg">[Innovate Solutions]</p>
+                            <p class="font-bold text-lg">[Enterprise Logistics]</p>
+                            <p class="font-bold text-lg">[Health Network]</p>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-2 bg-primary-dark border border-zinc-800 rounded-2xl p-8">
+                        <h3 class="text-xl font-bold mb-6">Industry Expertise Across the Board</h3>
+                        <ul class="grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-4">
+                            <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>Finance</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>Healthcare</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>Retail & E-commerce</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>Manufacturing</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>Logistics</li>
+                            <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>Education</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-primary-dark border border-zinc-800 rounded-2xl p-6">
+                        <h4 class="font-bold text-lg">Project Insight AI</h4>
+                        <p class="text-secondary-light mt-1">Predictive analytics dashboard for ERP.</p>
+                    </div>
+                    <div class="bg-primary-dark border border-zinc-800 rounded-2xl p-6">
+                        <h4 class="font-bold text-lg">ConnectFlow CRM</h4>
+                        <p class="text-secondary-light mt-1">Scalable CRM for modern sales teams.</p>
+                    </div>
+                    <div class="bg-primary-dark border border-zinc-800 rounded-2xl p-6">
+                        <h4 class="font-bold text-lg">SecureHealth Portal</h4>
+                        <p class="text-secondary-light mt-1">Patient data management with a focus on security.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="testimonials" class="py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Hear It From Our Clients</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div class="bg-secondary-dark p-8 rounded-2xl border border-zinc-800">
+                        <blockquote class="text-lg italic text-secondary-light border-l-2 border-accent pl-6 mb-6">"Qubithm's expertise in enterprise architecture was a game-changer for our platform. Their team integrated seamlessly with ours."</blockquote>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-zinc-800 mr-4"></div>
+                            <div>
+                                <strong class="text-primary-light">Jane Doe</strong>
+                                <p class="text-sm text-secondary-light">CTO, Global Tech Inc.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-secondary-dark p-8 rounded-2xl border border-zinc-800">
+                        <blockquote class="text-lg italic text-secondary-light border-l-2 border-accent pl-6 mb-6">"The talent they provided was exceptional. We went from concept to market-ready product in record time. Truly a reliable partner."</blockquote>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-zinc-800 mr-4"></div>
+                            <div>
+                                <strong class="text-primary-light">John Smith</strong>
+                                <p class="text-sm text-secondary-light">VP of Engineering, Innovate Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="bg-secondary-dark p-8 rounded-2xl border border-zinc-800">
+                        <blockquote class="text-lg italic text-secondary-light border-l-2 border-accent pl-6 mb-6">"Their consultancy saved us from costly mistakes. The strategic roadmap they delivered is now our bible for digital transformation."</blockquote>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-zinc-800 mr-4"></div>
+                            <div>
+                                <strong class="text-primary-light">Emily Chen</strong>
+                                <p class="text-sm text-secondary-light">Director of IT, Enterprise Logistics</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 md:py-28">
+            <div class="container mx-auto px-6 text-center">
+                 <div class="bg-accent rounded-2xl p-8 md:p-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Let’s Build the Future of Your Business</h2>
+                    <p class="text-lg text-purple-200 max-w-2xl mx-auto mb-8">Partner with Qubithm for enterprise-level solutions that deliver real growth.</p>
+                    <a href="#" class="bg-primary-light text-accent font-bold py-3 px-8 rounded-lg hover:bg-opacity-90 transition-all">
+                        Get Started Today
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-zinc-800">
+        <div class="container mx-auto px-6 py-16">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="col-span-2 md:col-span-1">
+                    <h3 class="text-2xl font-bold mb-4">Qubithm</h3>
+                    <p class="text-secondary-light max-w-xs">Innovative IT solutions for the world's leading enterprises.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-primary-light mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-secondary-light">
+                        <li><a href="#home" class="hover:text-accent transition-colors">Home</a></li>
+                        <li><a href="#ecosystem" class="hover:text-accent transition-colors">Ecosystem</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-primary-light mb-4">Services</h4>
+                    <ul class="space-y-2 text-secondary-light">
+                        <li><a href="#" class="hover:text-accent transition-colors">Consultancy (CaaS)</a></li>
+                        <li><a href="#" class="hover:text-accent transition-colors">Talent (TaaS)</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-primary-light mb-4">Contact</h4>
+                    <ul class="space-y-2 text-secondary-light">
+                        <li><a href="mailto:contact@qubithm.com" class="hover:text-accent transition-colors">contact@qubithm.com</a></li>
+                        <li><p>Mumbai, Maharashtra</p></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-16 border-t border-zinc-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-secondary-light">
+                <p>&copy; 2025 Qubithm. All Rights Reserved.</p>
+                <div class="mt-4 md:mt-0">
+                    <a href="#" class="mr-4 hover:text-accent transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-accent transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
